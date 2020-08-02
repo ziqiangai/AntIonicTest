@@ -1,0 +1,28 @@
+<ion-header>
+    <Navbar [icon]="icon" [rightContent]="rightContent" (onLeftClick)="onLeftClick()">
+        Page A
+    </Navbar>
+    <ng-template #icon>
+        <Icon [type]="'left'"></Icon>
+    </ng-template>
+
+    <ng-template #rightContent>
+        <Icon [type]="'search'" [ngStyle]="{ marginRight: '16px' }"></Icon>
+        <Icon [type]="'ellipsis'"></Icon>
+    </ng-template>
+</ion-header>
+<ion-content>
+    <div style="margin-top: 200px">
+        <WingBlank>
+            <Tag [selected]="true">参数:{{param}}</Tag>
+        </WingBlank>
+        <WhiteSpace></WhiteSpace>
+        <WingBlank>
+            <div Button [type]="'primary'" (onClick)="goToPageB()">
+                Go To Page B
+            </div>
+        </WingBlank>
+    </div>
+</ion-content>
+
+

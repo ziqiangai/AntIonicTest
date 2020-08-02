@@ -1,0 +1,7 @@
+{
+  "name": "AntTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
