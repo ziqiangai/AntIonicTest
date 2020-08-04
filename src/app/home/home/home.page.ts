@@ -76,7 +76,7 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
             if (this.ionRouterOutlet.canGoBack()) {
               console.log('回退');
               this.ionRouterOutlet.pop();
-            } else if (this.router.url === '/') {
+            } else if (this.router.url === '/home') {
                 if (new Date().getTime() - this.lastTimeBackPress >= this.timePeriodToExit) {
                     this.lastTimeBackPress = new Date().getTime();
                     this.presentAlertConfirm();
