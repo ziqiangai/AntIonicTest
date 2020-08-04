@@ -1,0 +1,43 @@
+<ion-header>
+  <Navbar >
+    智慧工地-登录
+  </Navbar>
+</ion-header>
+<ion-content>
+  <div style="
+  width: 100%;
+  height: 100%;
+  background:url(assets/login_bk.jpg) #f8f6e9;
+  position: absolute">
+
+  </div>
+  <div style="height: 25%"></div>
+
+  <WingBlank [size]="'lg'">
+    <ion-card>
+      <form style="padding: 20px"  [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+        <ion-item>
+          <ion-label>用户名:</ion-label>
+          <ion-input  type="text"  name="username" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>密码:</ion-label>
+          <ion-input type="password" name="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col size="6">
+            <AgreeItem formControlName="remember_me">
+              记住密码
+            </AgreeItem>
+          </ion-col>
+        </ion-row>
+        <ion-button type="submit" expand="block" [disabled]="!form.valid">登录</ion-button>
+      </form>
+    </ion-card>
+  </WingBlank>
+
+
+
+
+</ion-content>
