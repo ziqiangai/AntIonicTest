@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { HomePage } from './home/home.page';
 import {PageAComponent} from './page-a/page-a.component';
 import {PageBComponent} from './page-b/page-b.component';
+import {LoginPage} from './login/login.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    component: LoginPage,
   },
   {
     path: 'a',
@@ -16,7 +17,12 @@ const routes: Routes = [
   {
     path: 'b',
     component: PageBComponent,
+  },
+  {
+    path: 'home',
+    component: HomePage,
   }
+
 ];
 
 @NgModule({

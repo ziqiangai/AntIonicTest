@@ -14,6 +14,7 @@ export class PageBComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log('url:' + this.router.url);
     this.route.queryParamMap.subscribe((params) => {
       const tmp = params.get('a');
       console.log('page b', tmp);
