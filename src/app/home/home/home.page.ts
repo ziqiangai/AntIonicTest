@@ -17,7 +17,7 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     private sub: any;
     lastTimeBackPress = 0;
     timePeriodToExit = 2000;
-
+    array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     constructor(
         private platform: Platform,
         private ionRouterOutlet: IonRouterOutlet,
@@ -49,7 +49,7 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     }
 
     goToAPage() {
-        this.router.navigateByUrl('/a?a=' + this.param.slice(0, 3));
+        this.router.navigate(['/a'], { queryParams: {a: this.param.slice(0, 3)}});
     }
 
     ngAfterViewInit(): void {

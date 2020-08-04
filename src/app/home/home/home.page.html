@@ -1,0 +1,28 @@
+<ion-header>
+  <Navbar >
+    项目列表
+  </Navbar>
+</ion-header>
+<ion-content style="background-color: #efeff4">
+  <div style="padding-left:16px;padding-right: 16px;padding-bottom:30px;background-color: #efeff4">
+    <div style="border-bottom: 1px solid #ddd;">
+      <SearchBar [placeholder]="'搜索项目'" [setFocus]="true"></SearchBar>
+    </div>
+    <div *ngFor="let a of array" style="margin-top: 18px">
+      <ion-card>
+        <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+        <ion-card-header>
+          <ion-card-subtitle>广东省深圳市宝安区   机场路1号  <ion-badge color="primary">已发布</ion-badge></ion-card-subtitle>
+          <ion-card-title>项目 {{a}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情项目详情
+          <div style="margin-top: 15px" Button [type]="'primary'" >详情</div>
+        </ion-card-content>
+
+      </ion-card>
+    </div>
+
+
+  </div>
+</ion-content>
